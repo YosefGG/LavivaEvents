@@ -225,8 +225,13 @@
     "semantic_hash": "40ad533ba4e47bad08bea996752f6d53"
   },
   "vite.config.js": {
-    "mtime": 1786110112.6486125,
-    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
-    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
+    "mtime": 1786345093.6695101,
+    "ast_hash": "81caa40d8c3e9788f3b73d8f9943e7f7",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy.yml": {
+    "mtime": 1786345093.7052708,
+    "ast_hash": "95c9e60070c5ddaa798321c03a56e481",
+    "semantic_hash": ""
   }
 }

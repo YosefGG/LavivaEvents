@@ -1,12 +1,18 @@
-# Graph Report - .  (2026-08-10)
+# Graph Report - LavivaEvents  (2026-08-10)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 46 files · ~8,512 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 131 nodes · 357 edges · 10 communities (9 shown, 1 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `ec754fc0`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
