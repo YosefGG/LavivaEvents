@@ -5,9 +5,9 @@
     "semantic_hash": "5e6e3cea3e89137071c142dd7835b0ef"
   },
   "package.json": {
-    "mtime": 1786214132.836505,
-    "ast_hash": "c2c178d126c00356fb3b517a5727e6b9",
-    "semantic_hash": "c2c178d126c00356fb3b517a5727e6b9"
+    "mtime": 1786390243.6326485,
+    "ast_hash": "7fcd0bf95fb088f2f11ac48670dfbac0",
+    "semantic_hash": ""
   },
   "src/App.jsx": {
     "mtime": 1786340623.1011982,
@@ -225,13 +225,13 @@
     "semantic_hash": "40ad533ba4e47bad08bea996752f6d53"
   },
   "vite.config.js": {
-    "mtime": 1786355901.2555082,
-    "ast_hash": "f3bb4fe92c662b98844da2130e72527d",
+    "mtime": 1786390218.4132178,
+    "ast_hash": "fcb728e2d0cd69f573f12b0c1d62211c",
     "semantic_hash": ""
   },
   ".github/workflows/deploy.yml": {
-    "mtime": 1786389635.816025,
-    "ast_hash": "2c9ac10b5b2ebab9f459ced28975d51e",
+    "mtime": 1786390243.6358216,
+    "ast_hash": "5cd4c296bd50f7ba25cba708aa2fbcae",
     "semantic_hash": ""
   },
   "src/utils/assetUrl.js": {
@@ -242,6 +242,26 @@
   "AGENTS.md": {
     "mtime": 1786376658.971404,
     "ast_hash": "ddd3ee95d2d54b10acca9e280ee72c7f",
+    "semantic_hash": ""
+  },
+  "assets/index-zge1fybM.js": {
+    "mtime": 1786390246.4411864,
+    "ast_hash": "5959bc463a3483d82b902811f23c522a",
+    "semantic_hash": ""
+  },
+  "404.html": {
+    "mtime": 1786390246.4432206,
+    "ast_hash": "6dfea0716599c924b9fc3c138b74544a",
+    "semantic_hash": ""
+  },
+  "index.vite.html": {
+    "mtime": 1786390232.0694354,
+    "ast_hash": "c7666693b531f937bbdb1b42ec50894c",
+    "semantic_hash": ""
+  },
+  "hero-video.mp4": {
+    "mtime": 1786215163.155546,
+    "ast_hash": "2c92c2a3bb4b2985e41a09c613d9ece9",
     "semantic_hash": ""
   }
 }

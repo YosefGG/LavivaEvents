@@ -27,7 +27,28 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: cp dist/index.vite.html dist/index.html
       - run: cp dist/index.html dist/404.html
+
+      - name: Publish built site to main branch root
+        run: |
+          cp dist/index.html index.html
+          rm -rf assets
+          cp -r dist/assets assets
+          for item in dist/*; do
+            name=$(basename "$item")
+            if [ "$name" != "index.html" ] && [ "$name" != "assets" ]; then
+              rm -rf "$name"
+              cp -r "$item" "$name"
+            fi
+          done
+          cp dist/index.html 404.html
+          touch .nojekyll
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html assets 404.html .nojekyll catalog favicon.svg hero-video.mp4 icons.svg laviva-logo.png 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "Deploy built site to main [skip ci]"
+          git push
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
