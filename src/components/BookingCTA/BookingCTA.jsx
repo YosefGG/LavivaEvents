@@ -1,4 +1,5 @@
 import { getText } from '../../config/language';
+import { getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import Reveal from '../Reveal/Reveal';
 import BookButton from '../BookButton/BookButton';
 import styles from './BookingCTA.module.css';
@@ -22,7 +23,7 @@ export default function BookingCTA() {
               <BookButton to="/catalog" size="large">
                 {{ he: 'צפייה בקטלוג שלנו', en: 'View Our Catalog' }}
               </BookButton>
-              <BookButton href="/#contact" variant="secondary" size="large">
+              <BookButton href={getQuoteWhatsAppUrl()} variant="secondary" size="large">
                 {{ he: 'קבלו הצעת מחיר', en: 'Get a Quote' }}
               </BookButton>
             </div>

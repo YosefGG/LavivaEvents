@@ -13,7 +13,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Logo from '../Logo/Logo';
 import { getText } from '../../config/language';
 import { navLinks, homeSectionIds } from '../../data/navigation';
-import { businessInfo } from '../../data/businessInfo';
+import { getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import { scrollToSection, useScrollSpy } from '../../hooks/useScrollReveal';
 import BookButton from '../BookButton/BookButton';
 import styles from './Header.module.css';
@@ -90,7 +90,7 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <BookButton href={businessInfo.bookingUrl} size="small">
+            <BookButton href={getQuoteWhatsAppUrl()} size="small">
               {{ he: 'קבלו הצעת מחיר', en: 'Get a Quote' }}
             </BookButton>
             <IconButton
@@ -130,7 +130,7 @@ export default function Header() {
           ))}
         </List>
         <div className={styles.drawerCta}>
-          <BookButton href={businessInfo.bookingUrl} fullWidth size="large">
+          <BookButton href={getQuoteWhatsAppUrl()} fullWidth size="large">
             {{ he: 'קבלו הצעת מחיר', en: 'Get a Quote' }}
           </BookButton>
         </div>

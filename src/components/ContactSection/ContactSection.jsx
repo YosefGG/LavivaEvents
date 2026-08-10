@@ -5,7 +5,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PublicIcon from '@mui/icons-material/Public';
 import { getText } from '../../config/language';
-import { businessInfo, getWhatsAppUrl } from '../../data/businessInfo';
+import { businessInfo, getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import { getRevealClassName, useScrollReveal, useStaggerReveal } from '../../hooks/useScrollReveal';
 import Reveal from '../Reveal/Reveal';
 import SectionHeading from '../SectionHeading/SectionHeading';
@@ -42,7 +42,7 @@ export default function ContactSection() {
       icon: WhatsAppIcon,
       label: 'WhatsApp',
       value: businessInfo.phone,
-      href: getWhatsAppUrl('שלום, אשמח לקבל הצעת מחיר לאירוע שלי'),
+      href: getQuoteWhatsAppUrl(),
     },
     {
       icon: InstagramIcon,
@@ -126,7 +126,7 @@ export default function ContactSection() {
               style={{ transitionDelay: isVisible ? '0.45s' : '0s' }}
             >
               <BookButton
-                href={getWhatsAppUrl('שלום, אשמח לקבל הצעת מחיר לאירוע שלי')}
+                href={getQuoteWhatsAppUrl()}
                 fullWidth
                 size="large"
               >

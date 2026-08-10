@@ -2,7 +2,7 @@ import StarIcon from '@mui/icons-material/Star';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 import PublicIcon from '@mui/icons-material/Public';
 import { getText } from '../../config/language';
-import { businessInfo } from '../../data/businessInfo';
+import { businessInfo, getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import { REVEAL_DEFAULTS, useMountReveal } from '../../hooks/useScrollReveal';
 import BookButton from '../BookButton/BookButton';
 import styles from './HeroSection.module.css';
@@ -42,7 +42,7 @@ export default function HeroSection() {
               <BookButton
                 variant="secondary"
                 size="large"
-                href="/#contact"
+                href={getQuoteWhatsAppUrl()}
               >
                 {{ he: 'קבלו הצעת מחיר', en: 'Get a Quote' }}
               </BookButton>

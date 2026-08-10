@@ -1,14 +1,14 @@
 import Fab from '@mui/material/Fab';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { getText } from '../../config/language';
-import { getWhatsAppUrl } from '../../data/businessInfo';
+import { getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import styles from './WhatsAppFab.module.css';
 
 export default function WhatsAppFab() {
   return (
     <Fab
       component="a"
-      href={getWhatsAppUrl('שלום, אשמח לקבל פרטים על Laviva Events')}
+      href={getQuoteWhatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.fab} fabPulse`}

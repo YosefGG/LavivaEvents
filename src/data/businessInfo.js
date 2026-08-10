@@ -24,8 +24,8 @@ export const businessInfo = {
     he: 'עמדות צילום, קירות צילום ומגנטים לאירועים — חתונות, בר/בת מצווה, בריתות וכל חגיגה.',
     en: 'Photo booths, photo walls, and magnets for events — weddings, bar/bat mitzvah, britot, and every celebration.',
   },
-  phone: '052-821-5424',
-  whatsapp: '972528215424',
+  phone: '052-403-0392',
+  whatsapp: '972524030392',
   instagram: 'https://www.instagram.com/laviva_events_?igsh=MXF5NWtodWtpMDcwNw%3D%3D&utm_source=qr',
   email: 'hello@lavivaevents.co.il',
   serviceArea: {
@@ -52,9 +52,15 @@ export const businessInfo = {
   ],
 };
 
+export const quoteWhatsAppMessage = 'היי! אשמח לקבל פרטים על Laviva Events';
+
 export function getWhatsAppUrl(message) {
   const text = encodeURIComponent(message);
   return `https://wa.me/${businessInfo.whatsapp}?text=${text}`;
+}
+
+export function getQuoteWhatsAppUrl() {
+  return getWhatsAppUrl(quoteWhatsAppMessage);
 }
 
 export function getProductWhatsAppUrl(productName) {

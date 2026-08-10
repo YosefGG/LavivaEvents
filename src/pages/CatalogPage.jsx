@@ -6,6 +6,7 @@ import Reveal from '../components/Reveal/Reveal';
 import SectionHeading from '../components/SectionHeading/SectionHeading';
 import CategoryCard from '../components/CategoryCard/CategoryCard';
 import BookButton from '../components/BookButton/BookButton';
+import { getQuoteWhatsAppUrl } from '../data/businessInfo';
 import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
 import styles from './CatalogPage.module.css';
 
@@ -58,7 +59,7 @@ export default function CatalogPage() {
                 en: 'Did not find exactly what you need? We would love to build a custom package.',
               })}
             </p>
-            <BookButton href="/#contact" size="large">
+            <BookButton href={getQuoteWhatsAppUrl()} size="large">
               {{ he: 'קבלו הצעת מחיר', en: 'Get a Quote' }}
             </BookButton>
           </Reveal>

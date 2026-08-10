@@ -3,7 +3,7 @@ import Logo from '../Logo/Logo';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { getText } from '../../config/language';
-import { businessInfo } from '../../data/businessInfo';
+import { businessInfo, getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import { navLinks } from '../../data/navigation';
 import { scrollToSection } from '../../hooks/useScrollReveal';
 import styles from './Footer.module.css';
@@ -45,7 +45,7 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
               <a
-                href={`https://wa.me/${businessInfo.whatsapp}`}
+                href={getQuoteWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -70,6 +70,9 @@ export default function Footer() {
               ))}
               <li>
                 <Link to="/catalog">{getText({ he: 'קטלוג מלא', en: 'Full Catalog' })}</Link>
+              </li>
+              <li>
+                <Link to="/blog">{getText({ he: 'בלוג', en: 'Blog' })}</Link>
               </li>
             </ul>
           </div>

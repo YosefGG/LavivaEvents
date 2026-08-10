@@ -27,7 +27,6 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-      - run: cp dist/index.vite.html dist/index.html
       - run: cp dist/index.html dist/404.html
 
       - name: Publish built site to main branch root
