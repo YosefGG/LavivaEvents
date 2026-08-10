@@ -1,0 +1,153 @@
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 12px 40px rgba(201, 169, 98, 0.12);
+}
+
+.full {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .full {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.compact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.stacked .imageWrap {
+  aspect-ratio: 16 / 10;
+  min-height: unset;
+  height: auto;
+}
+
+.stacked .content {
+  flex: 1;
+}
+
+.imageLink {
+  display: block;
+  overflow: hidden;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.full .imageWrap {
+  aspect-ratio: auto;
+  min-height: 280px;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.3) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+.content {
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.compact .content {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.description {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-base);
+}
+
+.textLink:hover {
+  color: var(--color-accent);
+}
+
+.arrow {
+  font-size: 1rem !important;
+}

@@ -1,0 +1,151 @@
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.headerRow :global(.start) {
+  margin-bottom: 0;
+}
+
+.controls {
+  display: none;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.controlBtn {
+  border: 1px solid var(--color-border) !important;
+  border-radius: 4px !important;
+  width: 44px !important;
+  height: 44px !important;
+  transition: border-color var(--transition-base), background var(--transition-base), transform 0.2s ease !important;
+}
+
+.controlBtn:hover {
+  border-color: var(--color-text-primary) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  transform: scale(1.05);
+}
+
+.controlBtn:active {
+  transform: scale(0.96);
+}
+
+.carouselWrap {
+  position: relative;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--section-padding-x);
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.dot:hover {
+  background: var(--color-text-secondary);
+  transform: scale(1.15);
+}
+
+.dotActive {
+  background: var(--color-text-primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .controls {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerRow :global(.start) {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .carousel {
+    margin-inline: calc(-1 * var(--section-padding-x));
+    padding-inline: var(--section-padding-x);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+    gap: 1.5rem;
+  }
+
+  .slide {
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .controls,
+  .dots {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controlBtn:hover,
+  .controlBtn:active,
+  .dot:hover {
+    transform: none;
+  }
+}

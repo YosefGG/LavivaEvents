@@ -1,0 +1,12 @@
+node_modules/
+dist/
+public/
+src/assets/
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.gif
+*.webp
+README.md
+index.html

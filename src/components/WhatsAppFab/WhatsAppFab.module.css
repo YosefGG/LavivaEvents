@@ -1,0 +1,22 @@
+.fab {
+  position: fixed !important;
+  inset-inline-end: clamp(1rem, 3vw, 1.5rem);
+  bottom: clamp(1rem, 3vw, 1.5rem);
+  z-index: 1100;
+  width: 56px !important;
+  height: 56px !important;
+  background-color: #25d366 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4) !important;
+  transition: transform var(--transition-base), box-shadow var(--transition-base) !important;
+}
+
+.fab:hover {
+  background-color: #20bd5a !important;
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5) !important;
+}
+
+.icon {
+  font-size: 1.75rem !important;
+}

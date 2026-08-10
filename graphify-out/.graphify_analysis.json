@@ -1,0 +1,280 @@
+{
+  "communities": {
+    "0": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_emotion_react",
+      "package_dependencies_emotion_styled",
+      "package_dependencies_mui_icons_material",
+      "package_dependencies_mui_material",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_router_dom",
+      "package_devdependencies",
+      "package_devdependencies_oxlint",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "1": [
+      "src_components_bookbutton_bookbutton",
+      "src_components_bookbutton_bookbutton_bookbutton",
+      "src_components_bookingcta_bookingcta",
+      "src_components_breadcrumbs_breadcrumbs",
+      "src_components_breadcrumbs_breadcrumbs_breadcrumbs",
+      "src_components_catalogpreviewsection_catalogpreviewsection",
+      "src_components_categorycard_categorycard",
+      "src_components_categorycard_categorycard_categorycard",
+      "src_components_herosection_herosection",
+      "src_config_language",
+      "src_data_categories",
+      "src_data_categories_categories",
+      "src_data_categories_getcategorybyid",
+      "src_data_categories_getproductcountbycategory",
+      "src_data_products",
+      "src_data_products_getproductbyid",
+      "src_data_products_getproductsbycategory",
+      "src_data_products_products",
+      "src_data_services",
+      "src_data_services_featuredpackages",
+      "src_pages_catalogpage",
+      "src_pages_categorypage",
+      "src_pages_categorypage_categorypage"
+    ],
+    "2": [
+      "src_components_aboutsection_aboutsection",
+      "src_components_aboutsection_aboutsection_aboutsection",
+      "src_components_contactsection_contactsection",
+      "src_components_contactsection_contactsection_contactsection",
+      "src_components_gallerysection_gallerysection",
+      "src_components_reveal_reveal",
+      "src_components_reveal_reveal_reveal",
+      "src_components_sectionheading_sectionheading",
+      "src_components_sectionheading_sectionheading_sectionheading",
+      "src_components_whychooseus_whychooseus",
+      "src_data_gallery",
+      "src_data_gallery_galleryimages",
+      "src_data_whychooseus",
+      "src_data_whychooseus_whychooseusfeatures",
+      "src_hooks_usescrollreveal",
+      "src_hooks_usescrollreveal_getrevealclassname",
+      "src_hooks_usescrollreveal_usemountreveal",
+      "src_hooks_usescrollreveal_usescrollreveal",
+      "src_hooks_usescrollreveal_variant_class"
+    ],
+    "3": [
+      "src_components_footer_footer",
+      "src_components_footer_footer_footer",
+      "src_components_header_header",
+      "src_components_header_header_header",
+      "src_components_layout_layout",
+      "src_components_logo_logo",
+      "src_components_logo_logo_logo",
+      "src_components_whatsappfab_whatsappfab",
+      "src_components_whatsappfab_whatsappfab_whatsappfab",
+      "src_config_language_gettext",
+      "src_data_businessinfo",
+      "src_data_businessinfo_businessinfo",
+      "src_data_businessinfo_getwhatsappurl",
+      "src_data_navigation",
+      "src_data_navigation_homesectionids",
+      "src_data_navigation_navlinks",
+      "src_hooks_usescrollreveal_scrolltosection",
+      "src_hooks_usescrollreveal_usescrollspy"
+    ],
+    "4": [
+      "src_components_bookingcta_bookingcta_bookingcta",
+      "src_components_catalogpreviewsection_catalogpreviewsection_catalogpreviewsection",
+      "src_components_eventtypesstrip_eventtypesstrip",
+      "src_components_eventtypesstrip_eventtypesstrip_eventtypesstrip",
+      "src_components_gallerysection_gallerysection_gallerysection",
+      "src_components_herosection_herosection_herosection",
+      "src_components_testimonialcard_testimonialcard",
+      "src_components_testimonialcard_testimonialcard_testimonialcard",
+      "src_components_testimonialssection_testimonialssection",
+      "src_components_testimonialssection_testimonialssection_testimonialssection",
+      "src_components_whychooseus_whychooseus_whychooseus",
+      "src_data_testimonials",
+      "src_data_testimonials_testimonials",
+      "src_hooks_usecarousel",
+      "src_hooks_usecarousel_usecarousel",
+      "src_hooks_usescrollreveal_usestaggerreveal",
+      "src_pages_homepage"
+    ],
+    "5": [
+      "src_app",
+      "src_app_app",
+      "src_components_layout_layout_layout",
+      "src_main",
+      "src_pages_catalogpage_catalogpage",
+      "src_pages_homepage_homepage",
+      "src_router",
+      "src_router_router",
+      "src_theme_muitheme",
+      "src_theme_muitheme_colors",
+      "src_theme_muitheme_muitheme"
+    ],
+    "6": [
+      "src_components_productcard_productcard",
+      "src_components_productcard_productcard_productcard",
+      "src_components_productgrid_productgrid",
+      "src_components_productgrid_productgrid_productgrid",
+      "src_data_businessinfo_getproductwhatsappurl",
+      "src_data_eventtypes",
+      "src_data_eventtypes_eventtypes",
+      "src_data_eventtypes_geteventtypebyid"
+    ],
+    "7": [
+      "oxlintrc",
+      "oxlintrc_plugins",
+      "oxlintrc_rules",
+      "oxlintrc_rules_react_only_export_components",
+      "oxlintrc_rules_react_rules_of_hooks",
+      "oxlintrc_schema"
+    ],
+    "8": [
+      "src_components_stats_stats",
+      "src_components_stats_stats_stats",
+      "src_data_stats",
+      "src_data_stats_stats"
+    ],
+    "9": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08333333333333333,
+    "1": 0.22134387351778656,
+    "2": 0.2631578947368421,
+    "3": 0.28104575163398693,
+    "4": 0.21323529411764705,
+    "5": 0.23636363636363636,
+    "6": 0.35714285714285715,
+    "7": 0.3333333333333333,
+    "8": 0.6666666666666666,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_config_language_gettext",
+      "label": "getText()",
+      "degree": 36
+    },
+    {
+      "id": "src_hooks_usescrollreveal_usestaggerreveal",
+      "label": "useStaggerReveal()",
+      "degree": 20
+    },
+    {
+      "id": "src_components_bookbutton_bookbutton_bookbutton",
+      "label": "BookButton()",
+      "degree": 11
+    },
+    {
+      "id": "src_components_reveal_reveal_reveal",
+      "label": "Reveal()",
+      "degree": 11
+    },
+    {
+      "id": "src_components_sectionheading_sectionheading_sectionheading",
+      "label": "SectionHeading()",
+      "degree": 10
+    },
+    {
+      "id": "src_hooks_usescrollreveal_usescrollreveal",
+      "label": "useScrollReveal()",
+      "degree": 8
+    },
+    {
+      "id": "src_components_contactsection_contactsection_contactsection",
+      "label": "ContactSection()",
+      "degree": 7
+    },
+    {
+      "id": "src_data_businessinfo_businessinfo",
+      "label": "businessInfo",
+      "degree": 7
+    },
+    {
+      "id": "src_hooks_usescrollreveal_getrevealclassname",
+      "label": "getRevealClassName()",
+      "degree": 7
+    },
+    {
+      "id": "src_data_businessinfo_getwhatsappurl",
+      "label": "getWhatsAppUrl()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AboutSection()",
+      "target": "getText()",
+      "source_files": [
+        "src/components/AboutSection/AboutSection.jsx",
+        "src/config/language.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "BookButton()",
+      "target": "getText()",
+      "source_files": [
+        "src/components/BookButton/BookButton.jsx",
+        "src/config/language.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "BookingCTA()",
+      "target": "getText()",
+      "source_files": [
+        "src/components/BookingCTA/BookingCTA.jsx",
+        "src/config/language.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "CategoryCard()",
+      "target": "getText()",
+      "source_files": [
+        "src/components/CategoryCard/CategoryCard.jsx",
+        "src/config/language.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ContactSection()",
+      "target": "getText()",
+      "source_files": [
+        "src/components/ContactSection/ContactSection.jsx",
+        "src/config/language.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

@@ -1,0 +1,148 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  overflow-x: clip;
+  min-width: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base),
+    transform 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.contactItem:hover {
+  border-color: var(--color-accent);
+  background: rgba(201, 169, 98, 0.05);
+  transform: translateX(4px);
+}
+
+[dir='rtl'] a.contactItem:hover {
+  transform: translateX(-4px);
+}
+
+.contactIcon {
+  font-size: 1.375rem !important;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.125rem;
+}
+
+.contactValue {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.availability {
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.availabilityHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.availabilityIcon {
+  font-size: 1.25rem !important;
+  color: var(--color-accent);
+}
+
+.availabilityText {
+  margin: 0;
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.ctaCol {
+  min-height: 320px;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 320px;
+  background: var(--color-bg-dark);
+  border: 1px solid rgba(201, 169, 98, 0.2);
+  border-radius: 12px;
+  padding: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--color-text-on-dark);
+  margin: 0 0 1rem;
+}
+
+.ctaText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(245, 240, 232, 0.75);
+  margin: 0 0 2rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .ctaCol {
+    min-height: 100%;
+  }
+
+  .ctaCard {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 599px) {
+  .contactItem {
+    padding: 1rem;
+  }
+}

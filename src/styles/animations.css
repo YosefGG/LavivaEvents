@@ -1,0 +1,65 @@
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* Transition only on enter — instant reset when leaving viewport */
+.reveal.revealVisible {
+  opacity: 1;
+  transform: none !important;
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revealUp {
+  transform: translateY(36px);
+}
+
+.revealDown {
+  transform: translateY(-36px);
+}
+
+.revealStart {
+  transform: translateX(-40px);
+}
+
+.revealEnd {
+  transform: translateX(40px);
+}
+
+[dir='rtl'] .revealStart {
+  transform: translateX(40px);
+}
+
+[dir='rtl'] .revealEnd {
+  transform: translateX(-40px);
+}
+
+.revealScale {
+  transform: scale(0.94);
+}
+
+.revealFade {
+  transform: none;
+}
+
+@media (max-width: 899px) {
+  .revealStart,
+  .revealEnd,
+  [dir='rtl'] .revealStart,
+  [dir='rtl'] .revealEnd {
+    transform: translateY(24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none !important;
+  }
+
+  .reveal.revealVisible {
+    transition: none;
+  }
+}
