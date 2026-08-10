@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yosefgg.github.io/LavivaEvents/sitemap.xml
