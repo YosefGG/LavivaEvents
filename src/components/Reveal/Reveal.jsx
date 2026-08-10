@@ -7,7 +7,7 @@ export default function Reveal({
   className = '',
   as: Tag = 'div',
   threshold,
-  once = false,
+  once = true,
   style = {},
 }) {
   const { ref, isVisible } = useScrollReveal({ threshold, once });

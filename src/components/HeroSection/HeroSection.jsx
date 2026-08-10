@@ -3,27 +3,24 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 import PublicIcon from '@mui/icons-material/Public';
 import { getText } from '../../config/language';
 import { businessInfo } from '../../data/businessInfo';
-import { useStaggerReveal } from '../../hooks/useScrollReveal';
+import { REVEAL_DEFAULTS, useMountReveal } from '../../hooks/useScrollReveal';
 import BookButton from '../BookButton/BookButton';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
-  const { ref, getItemProps } = useStaggerReveal({
-    staggerDelay: 0.1,
-    variant: 'up',
-    threshold: 0.15,
-  });
+  const { getItemProps } = useMountReveal(REVEAL_DEFAULTS.mountDelay);
 
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.imageWrapper}>
         <video
           src={businessInfo.heroVideo}
-          className={styles.heroVideo}
+          className={`${styles.heroVideo} heroKenBurns`}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           aria-hidden="true"
         />
         <div className={styles.overlay} />
@@ -31,14 +28,14 @@ export default function HeroSection() {
 
       <div className={styles.content}>
         <div className="container">
-          <div ref={ref} className={styles.inner}>
-            <span {...getItemProps(0, styles.eyebrow)}>{getText(businessInfo.tagline)}</span>
-            <h1 {...getItemProps(1, styles.title)}>{getText(businessInfo.name)}</h1>
-            <p {...getItemProps(2, styles.description)}>
+          <div className={styles.inner}>
+            <span {...getItemProps(0, 'up', styles.eyebrow)}>{getText(businessInfo.tagline)}</span>
+            <h1 {...getItemProps(1, 'up', styles.title)}>{getText(businessInfo.name)}</h1>
+            <p {...getItemProps(2, 'up', styles.description)}>
               {getText(businessInfo.shortDescription)}
             </p>
 
-            <div {...getItemProps(3, styles.ctas)}>
+            <div {...getItemProps(3, 'up', styles.ctas)}>
               <BookButton to="/catalog" size="large">
                 {{ he: 'צפייה בקטלוג שלנו', en: 'View Our Catalog' }}
               </BookButton>
@@ -51,7 +48,7 @@ export default function HeroSection() {
               </BookButton>
             </div>
 
-            <div {...getItemProps(4, styles.meta)}>
+            <div {...getItemProps(4, 'up', styles.meta)}>
               <div className={styles.metaItem}>
                 <CelebrationIcon className={styles.metaIcon} />
                 <span>

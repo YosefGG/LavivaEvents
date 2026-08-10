@@ -1,0 +1,56 @@
+---
+description: Landing page (דף נחיתה) animation standards — reveals, hero, micro-interactions
+globs: src/{components,pages,hooks/useScrollReveal.js,styles/animations.css}/**
+alwaysApply: false
+---
+
+# Landing Page Animations (דף נחיתה)
+
+Purposeful motion that guides the eye — never jittery or distracting.
+
+## Stack (this project)
+
+- **CSS**: `src/styles/animations.css` — reveal variants + reduced-motion
+- **Hook**: `useScrollReveal`, `useStaggerReveal`, `useMountReveal` in `src/hooks/useScrollReveal.js`
+- **Component**: `<Reveal variant="up" delay={0.1} />` for one-off blocks
+
+## When to use what
+
+| Zone | Hook / pattern | Notes |
+|------|----------------|-------|
+| Hero (above fold) | `useMountReveal(120)` | Plays on load, not scroll |
+| Section headings | `<Reveal variant="up">` | Single block |
+| Grids / lists | `useStaggerReveal({ staggerDelay: 0.08 })` | 60–100ms between items |
+| Split columns (About, Contact) | `revealStart` + `revealEnd` | RTL-aware in CSS |
+| Cards / gallery | `variant="scale"` | Subtle scale 0.94 → 1 |
+| CTA bands | `<Reveal variant="scale">` | One focal entrance |
+
+## Defaults (do not weaken without reason)
+
+```js
+// useScrollReveal defaults
+{ threshold: 0.08, rootMargin: '0px', once: true }
+```
+
+- **`once: true`** — revealed elements stay visible (no fade-out on scroll)
+- **Only animate `transform` and `opacity`** — never width/height/margin
+- **Reveal duration**: ~550ms, easing `cubic-bezier(0.22, 1, 0.36, 1)`
+- **Hover / micro**: 200–300ms (`var(--transition-base)`)
+- **Stagger**: 0.06–0.1s per child
+
+## Micro-interactions
+
+- Buttons: `translateY(-2px)` + soft shadow on hover (see `BookButton`)
+- Cards/chips: border-color + slight lift on hover
+- Hero video: slow Ken Burns (`scale` only, 18–22s, `prefers-reduced-motion` off)
+
+## Accessibility
+
+Always respect `@media (prefers-reduced-motion: reduce)` — skip motion, show content immediately.
+
+## Anti-patterns
+
+- ❌ `once: false` on landing sections (causes disappearing content)
+- ❌ Negative `rootMargin` on reveals (premature hide/show flicker)
+- ❌ Animating layout properties or heavy box-shadow loops
+- ❌ More than one “hero” animation fighting for attention

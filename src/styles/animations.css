@@ -3,37 +3,37 @@
   will-change: opacity, transform;
 }
 
-/* Transition only on enter — instant reset when leaving viewport */
+/* Entrance transition — stays visible once revealed */
 .reveal.revealVisible {
   opacity: 1;
   transform: none !important;
   transition:
-    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--reveal-duration) var(--reveal-easing),
+    transform var(--reveal-duration) var(--reveal-easing);
 }
 
 .revealUp {
-  transform: translateY(36px);
+  transform: translateY(var(--reveal-distance));
 }
 
 .revealDown {
-  transform: translateY(-36px);
+  transform: translateY(calc(var(--reveal-distance) * -1));
 }
 
 .revealStart {
-  transform: translateX(-40px);
+  transform: translateX(calc(var(--reveal-distance) * -1.4));
 }
 
 .revealEnd {
-  transform: translateX(40px);
+  transform: translateX(calc(var(--reveal-distance) * 1.4));
 }
 
 [dir='rtl'] .revealStart {
-  transform: translateX(40px);
+  transform: translateX(calc(var(--reveal-distance) * 1.4));
 }
 
 [dir='rtl'] .revealEnd {
-  transform: translateX(-40px);
+  transform: translateX(calc(var(--reveal-distance) * -1.4));
 }
 
 .revealScale {
@@ -44,12 +44,59 @@
   transform: none;
 }
 
+/* Hero — slow ambient zoom on background video */
+@keyframes heroKenBurns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+.heroKenBurns {
+  animation: heroKenBurns 20s ease-out forwards;
+}
+
+/* CTA — soft breathing glow */
+@keyframes ambientGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.ambientGlow {
+  animation: ambientGlow 5s ease-in-out infinite;
+}
+
+/* FAB — gentle attention pulse */
+@keyframes fabPulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+  }
+}
+
+.fabPulse {
+  animation: fabPulse 3s ease-in-out infinite;
+}
+
 @media (max-width: 899px) {
   .revealStart,
   .revealEnd,
   [dir='rtl'] .revealStart,
   [dir='rtl'] .revealEnd {
-    transform: translateY(24px);
+    transform: translateY(22px);
   }
 }
 
@@ -61,5 +108,11 @@
 
   .reveal.revealVisible {
     transition: none;
+  }
+
+  .heroKenBurns,
+  .ambientGlow,
+  .fabPulse {
+    animation: none;
   }
 }

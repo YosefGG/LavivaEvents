@@ -11,7 +11,7 @@ export default function WhatsAppFab() {
       href={getWhatsAppUrl('שלום, אשמח לקבל פרטים על Laviva Events')}
       target="_blank"
       rel="noopener noreferrer"
-      className={styles.fab}
+      className={`${styles.fab} fabPulse`}
       aria-label={getText({ he: 'שלחו הודעה בוואטסאפ', en: 'Message on WhatsApp' })}
     >
       <WhatsAppIcon className={styles.icon} />

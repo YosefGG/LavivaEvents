@@ -24,6 +24,10 @@
   --font-primary: 'Heebo', system-ui, sans-serif;
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --transition-base: 0.3s ease;
+  --reveal-duration: 0.55s;
+  --reveal-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-distance: 28px;
+  --stagger-step: 0.08s;
 }
 
 *,

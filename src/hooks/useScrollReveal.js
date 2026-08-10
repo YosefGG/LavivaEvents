@@ -1,5 +1,14 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
+/** Defaults aligned with .cursor/rules/landing-page-animations.mdc */
+export const REVEAL_DEFAULTS = {
+  threshold: 0.08,
+  rootMargin: '0px',
+  once: true,
+  staggerDelay: 0.08,
+  mountDelay: 120,
+};
+
 const VARIANT_CLASS = {
   up: 'revealUp',
   down: 'revealDown',
@@ -18,9 +27,9 @@ export function getRevealClassName(variant = 'up', isVisible, extra = '') {
 
 export function useScrollReveal(options = {}) {
   const {
-    threshold = 0.12,
-    rootMargin = '0px 0px -48px 0px',
-    once = false,
+    threshold = REVEAL_DEFAULTS.threshold,
+    rootMargin = REVEAL_DEFAULTS.rootMargin,
+    once = REVEAL_DEFAULTS.once,
   } = options;
 
   const ref = useRef(null);
@@ -51,7 +60,11 @@ export function useScrollReveal(options = {}) {
 
 /** Staggered reveal for child items inside a container */
 export function useStaggerReveal(options = {}) {
-  const { staggerDelay = 0.08, variant = 'up', ...scrollOptions } = options;
+  const {
+    staggerDelay = REVEAL_DEFAULTS.staggerDelay,
+    variant = 'up',
+    ...scrollOptions
+  } = options;
   const { ref, isVisible } = useScrollReveal(scrollOptions);
 
   const getItemProps = useCallback(
@@ -80,10 +93,11 @@ export function useMountReveal(delay = 0) {
     (index, variant = 'up', className = '', staggerDelay = 0.1) => ({
       className: getRevealClassName(variant, isVisible, className),
       style: {
-        transitionDelay: isVisible ? `${delay + index * staggerDelay}s` : '0s',
+        // Mount delay is already applied via setTimeout; stagger only between items (seconds).
+        transitionDelay: isVisible ? `${index * staggerDelay}s` : '0s',
       },
     }),
-    [isVisible, delay]
+    [isVisible]
   );
 
   return { isVisible, getItemProps };

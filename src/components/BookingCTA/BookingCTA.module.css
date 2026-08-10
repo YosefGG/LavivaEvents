@@ -22,6 +22,7 @@
     transparent 70%
   );
   pointer-events: none;
+  animation: ambientGlow 5s ease-in-out infinite;
 }
 
 .title {
@@ -50,6 +51,12 @@
   justify-content: center;
   gap: 1rem;
   position: relative;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inner::before {
+    animation: none;
+  }
 }
 
 @media (max-width: 600px) {
