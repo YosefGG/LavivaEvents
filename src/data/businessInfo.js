@@ -1,6 +1,8 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export const businessInfo = {
   name: { he: 'Laviva Events', en: 'Laviva Events' },
-  logo: '/laviva-logo.png',
+  logo: assetUrl('/laviva-logo.png'),
   slogan: { he: 'כל פרט חשוב', en: 'Every Detail Matters' },
   tagline: {
     he: 'עמדות צילום וחוויות ויזואליות לאירועים',
@@ -40,7 +42,7 @@ export const businessInfo = {
   reviewCount: 180,
   yearsExperience: 8,
   eventsCount: 500,
-  heroVideo: '/hero-video.mp4',
+  heroVideo: assetUrl('/hero-video.mp4'),
   aboutImage:
     'https://images.unsplash.com/photo-1465497424741-b3246200d2f0?w=900&q=80',
   aboutFeatures: [

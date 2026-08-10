@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export const categories = [
   {
     id: 'booths',
@@ -10,8 +12,8 @@ export const categories = [
       he: 'עמדות צילום מקצועיות עם צוות, אביזרים והדפסות מיידיות.',
       en: 'Professional photo booths with attendant, props, and instant prints.',
     },
-    image: '/catalog/booths/classic-booth.png',
-    heroImage: '/catalog/booths/selfie-station.png',
+    image: assetUrl('/catalog/booths/classic-booth.png'),
+    heroImage: assetUrl('/catalog/booths/selfie-station.png'),
   },
   {
     id: 'walls',
@@ -24,8 +26,8 @@ export const categories = [
       he: 'קירות צילום מעוצבים — פרחים, ניאון, מראות ועיצוב אישי.',
       en: 'Styled photo walls — florals, neon, mirrors, and custom branding.',
     },
-    image: '/catalog/walls/welcome-baby-mila.png',
-    heroImage: '/catalog/walls/bar-mitzvah-daniel.png',
+    image: assetUrl('/catalog/walls/welcome-baby-mila.png'),
+    heroImage: assetUrl('/catalog/walls/bar-mitzvah-daniel.png'),
   },
   {
     id: 'magnets',

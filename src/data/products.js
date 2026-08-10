@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export const products = [
   {
     id: 'classic-booth',
@@ -7,7 +9,7 @@ export const products = [
       he: 'עמדת צילום מסורתית עם וילון, תאורה מקצועית, אביזרים מצחיקים והדפסות מיידיות.',
       en: 'Traditional enclosed booth with curtain, pro lighting, fun props, and instant prints.',
     },
-    image: '/catalog/booths/classic-booth.png',
+    image: assetUrl('/catalog/booths/classic-booth.png'),
     eventTypes: ['wedding', 'bar-mitzvah', 'brit', 'corporate', 'all'],
     features: [
       { he: 'צוות מלווה לאורך האירוע', en: 'Attendant throughout the event' },
@@ -42,7 +44,7 @@ export const products = [
       he: 'עמדת סלפי פתוחה עם מסך מגע, פילטרים מותאמים ומיתוג אישי לאירוע שלכם.',
       en: 'Open selfie station with touch screen, custom filters, and personalized event branding.',
     },
-    image: '/catalog/booths/selfie-station.png',
+    image: assetUrl('/catalog/booths/selfie-station.png'),
     eventTypes: ['wedding', 'bar-mitzvah', 'brit', 'corporate', 'all'],
     features: [
       { he: 'מסך מגע גדול', en: 'Large touch screen' },
@@ -95,7 +97,7 @@ export const products = [
       he: 'קיר צילום מעוצב לברית/התקבלות תינוקת — קשת מוארת, בלונים, פרחים ועניבת בד אלגנטית בגווני ורוד.',
       en: 'Styled photo wall for a baby girl celebration — backlit arch, balloons, florals, and an elegant pink fabric bow.',
     },
-    image: '/catalog/walls/welcome-baby-mila.png',
+    image: assetUrl('/catalog/walls/welcome-baby-mila.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'קשת מוארת עם שם מותאם', en: 'Backlit arch with custom name' },
@@ -112,7 +114,7 @@ export const products = [
       he: 'קיר צילום יוקרתי לברית — רקע מואר, עמוד בלונים, עגלת ירח ודובי ענק בגווני כחול וזהב.',
       en: 'Luxury brit photo wall — backlit backdrop, balloon column, moon cradle, and giant teddy bear in navy and gold.',
     },
-    image: '/catalog/walls/welcome-baby-boy-navy.png',
+    image: assetUrl('/catalog/walls/welcome-baby-boy-navy.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'רקע מואר עם טקסט מותאם', en: 'Backlit backdrop with custom text' },
@@ -129,7 +131,7 @@ export const products = [
       he: 'קיר צילום עם שלוש קשתות מדורגות, גרלנד בלונים, פדסטלים ואביזרים בגווני תכלת, זהב ובז\'.',
       en: 'Photo wall with three tiered arches, balloon garland, plinths, and props in light blue, gold, and beige.',
     },
-    image: '/catalog/walls/welcome-baby-arches.png',
+    image: assetUrl('/catalog/walls/welcome-baby-arches.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'קשתות מדורגות מוארות', en: 'Tiered backlit arches' },
@@ -146,7 +148,7 @@ export const products = [
       he: 'קיר צילום בנושא שמיים — רקע כחול כהה עם ירח וכוכבים, עמודי בלונים, עגלת ירח ודובי ענק.',
       en: 'Celestial-themed photo wall — dark blue sky backdrop with moon and stars, balloon columns, moon cradle, and giant bear.',
     },
-    image: '/catalog/walls/welcome-baby-boy-celestial.png',
+    image: assetUrl('/catalog/walls/welcome-baby-boy-celestial.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'עיצוב שמיים עם תאורה', en: 'Sky-themed design with lighting' },
@@ -163,7 +165,7 @@ export const products = [
       he: 'קיר צילום אלגנטי בגווני בז\' וירוק מרווה — קשת מוארת, גרלנד בלונים, דובי וסוס נדנדה.',
       en: 'Elegant photo wall in beige and sage green — backlit arch, balloon garland, teddy bear, and rocking horse.',
     },
-    image: '/catalog/walls/welcome-baby-boy-sage.png',
+    image: assetUrl('/catalog/walls/welcome-baby-boy-sage.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'קשת מוארת עם טקסט זהב', en: 'Backlit arch with gold text' },
@@ -180,7 +182,7 @@ export const products = [
       he: 'קיר צילום מעוצב עם טקסט "מזמור לתודה", קשת בלונים, פדסטלים, דובי וסוס נדנדה — מושלם לברית.',
       en: 'Styled photo wall featuring "Mizmor LeToda" text, balloon arch, plinths, teddy bear, and rocking horse — perfect for brit.',
     },
-    image: '/catalog/walls/mizmor-le-toda-baby-boy.png',
+    image: assetUrl('/catalog/walls/mizmor-le-toda-baby-boy.png'),
     eventTypes: ['brit', 'all'],
     features: [
       { he: 'טקסט מותאם אישית', en: 'Custom personalized text' },
@@ -197,7 +199,7 @@ export const products = [
       he: 'קיר צילום יוקרתי לבר מצווה — פאנל מואר, פרחים לבנים, נרות, כדורים מוזהבים ופסי LED.',
       en: 'Luxury bar mitzvah photo wall — backlit panel, white florals, candles, gold orbs, and LED accents.',
     },
-    image: '/catalog/walls/bar-mitzvah-daniel.png',
+    image: assetUrl('/catalog/walls/bar-mitzvah-daniel.png'),
     eventTypes: ['bar-mitzvah', 'all'],
     features: [
       { he: 'פאנל מואר עם שם מותאם', en: 'Backlit panel with custom name' },
@@ -214,7 +216,7 @@ export const products = [
       he: 'קיר צילום אלגנטי לבת מצווה — קשת מוארת, בלונים, פרחים גדולים ועניבת בד בגווני אפור ולבן.',
       en: 'Elegant bat mitzvah photo wall — backlit arch, balloons, oversized florals, and fabric bow in grey and white.',
     },
-    image: '/catalog/walls/bat-mitzvah-shilo.png',
+    image: assetUrl('/catalog/walls/bat-mitzvah-shilo.png'),
     eventTypes: ['bar-mitzvah', 'all'],
     features: [
       { he: 'קשת מוארת עם שם מותאם', en: 'Backlit arch with custom name' },
@@ -231,7 +233,7 @@ export const products = [
       he: 'קיר צילום מרשים לבר מצווה — פאנל עגול מואר, קירות מחורצים, פרחים לבנים, נרות וכדורים מוזהבים.',
       en: 'Stunning bar mitzvah photo wall — backlit circular panel, slatted walls, white florals, candles, and gold orbs.',
     },
-    image: '/catalog/walls/bar-mitzvah-ori.png',
+    image: assetUrl('/catalog/walls/bar-mitzvah-ori.png'),
     eventTypes: ['bar-mitzvah', 'all'],
     features: [
       { he: 'פאנל עגול מואר', en: 'Backlit circular panel' },
