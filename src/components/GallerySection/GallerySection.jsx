@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom';
 import { getText } from '../../config/language';
 import { galleryImages } from '../../data/gallery';
+import { getProductById } from '../../data/products';
 import { useStaggerReveal } from '../../hooks/useScrollReveal';
 import Reveal from '../Reveal/Reveal';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import styles from './GallerySection.module.css';
+
+const LAYOUT_CYCLE = ['full', 'half', 'half', 'third', 'third', 'third'];
 
 export default function GallerySection() {
   const { ref, getItemProps } = useStaggerReveal({ staggerDelay: 0.06, variant: 'scale' });
@@ -23,22 +27,46 @@ export default function GallerySection() {
         </Reveal>
 
         <div ref={ref} className={styles.grid}>
-          {galleryImages.map((image, index) => (
-            <div
-              key={image.id}
-              {...getItemProps(index, `${styles.item} ${styles[image.span]}`)}
-            >
-              <img
-                src={image.src}
-                alt={getText(image.alt)}
-                className={styles.image}
-                loading="lazy"
-              />
-              <div className={styles.overlay}>
-                <span className={styles.caption}>{getText(image.alt)}</span>
-              </div>
-            </div>
-          ))}
+          {galleryImages.map((image, index) => {
+            const product = getProductById(image.productId);
+            const itemClassName = `${styles.item} ${styles[image.span]} ${styles[LAYOUT_CYCLE[index % LAYOUT_CYCLE.length]]}`;
+            const itemProps = getItemProps(index, itemClassName);
+
+            if (!product) {
+              return (
+                <div key={image.id} {...itemProps}>
+                  <img
+                    src={image.src}
+                    alt={getText(image.alt)}
+                    className={styles.image}
+                    loading="lazy"
+                  />
+                  <div className={styles.overlay}>
+                    <span className={styles.caption}>{getText(image.alt)}</span>
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={image.id}
+                to={`/catalog/${product.categoryId}#${product.id}`}
+                {...itemProps}
+                className={`${itemProps.className} ${styles.link}`}
+              >
+                <img
+                  src={image.src}
+                  alt={getText(image.alt)}
+                  className={styles.image}
+                  loading="lazy"
+                />
+                <div className={styles.overlay}>
+                  <span className={styles.caption}>{getText(image.alt)}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

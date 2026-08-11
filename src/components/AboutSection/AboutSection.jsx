@@ -1,6 +1,7 @@
 import { getText } from '../../config/language';
 import { businessInfo } from '../../data/businessInfo';
 import { getRevealClassName, useScrollReveal } from '../../hooks/useScrollReveal';
+import Logo from '../Logo/Logo';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Stats from '../Stats/Stats';
 import styles from './AboutSection.module.css';
@@ -14,11 +15,9 @@ export default function AboutSection() {
         <div ref={ref} className={styles.grid}>
           <div className={getRevealClassName('start', isVisible, styles.imageCol)}>
             <div className={styles.imageFrame}>
-              <img
-                src={businessInfo.aboutImage}
-                alt={getText(businessInfo.name)}
-                className={styles.image}
-              />
+              <div className={styles.logoPanel}>
+                <Logo variant="about" asLink={false} />
+              </div>
               <div className={styles.experienceBadge}>
                 <span className={styles.experienceValue}>{businessInfo.yearsExperience}+</span>
                 <span className={styles.experienceLabel}>

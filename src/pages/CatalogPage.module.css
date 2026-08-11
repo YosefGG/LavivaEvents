@@ -40,6 +40,7 @@
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
+    row-gap: clamp(2rem, 4vw, 3rem);
   }
 
   .gridItem {
@@ -48,16 +49,18 @@
     padding-block: 0;
     padding-inline: clamp(1.25rem, 2.5vw, 2rem);
     border-block-end: none;
+  }
+
+  .gridItem:not(:nth-child(3n)) {
     border-inline-end: 1px solid var(--color-border);
   }
 
-  .gridItem:first-child {
+  .gridItem:nth-child(3n + 1) {
     padding-inline-start: 0;
   }
 
-  .gridItem:last-child {
+  .gridItem:nth-child(3n) {
     padding-inline-end: 0;
-    border-inline-end: none;
   }
 }
 

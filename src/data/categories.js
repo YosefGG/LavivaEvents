@@ -40,10 +40,36 @@ export const categories = [
       he: 'הדפסת מגנטים מיידית עם עיצוב מותאם לאירוע שלכם.',
       en: 'Instant magnet printing with custom event branding.',
     },
-    image:
-      'https://images.unsplash.com/photo-1520854221256-174851aa3ced?w=1200&q=80',
-    heroImage:
-      'https://images.unsplash.com/photo-1465497424741-b3246200d2f0?w=1600&q=80',
+    image: assetUrl('/catalog/booths/premium-booth-station.png'),
+    heroImage: assetUrl('/catalog/booths/premium-booth-station.png'),
+  },
+  {
+    id: 'marriage-proposal',
+    name: { he: 'הצעת נישואין', en: 'Marriage Proposal' },
+    description: {
+      he: 'קירות צילום והפקות רומנטיות להצעת נישואין — עיצוב מרהיב על החוף או בכל מיקום, עם פרחים, תאורה ולוח מותאם אישית לרגע שאף אחד לא ישכח.',
+      en: 'Romantic photo walls and setups for marriage proposals — stunning beach or venue designs with florals, lighting, and a custom sign for an unforgettable moment.',
+    },
+    shortDescription: {
+      he: 'הפקות רומנטיות וקירות צילום מעוצבים להצעת נישואין.',
+      en: 'Romantic setups and styled photo walls for marriage proposals.',
+    },
+    image: assetUrl('/catalog/walls/marriage-proposal-marry.png'),
+    heroImage: assetUrl('/catalog/walls/marriage-proposal-marry.png'),
+  },
+  {
+    id: 'gender-reveal',
+    name: { he: 'גילוי מין העובר', en: 'Gender Reveal' },
+    description: {
+      he: 'קירות צילום והפקות מעוצבות לגילוי מין העובר — בלונים, פרחים, עמדת צילום ועיצוב מותאם אישית לחגיגה בלתי נשכחת עם המשפחה והחברים.',
+      en: 'Styled photo walls and setups for gender reveals — balloons, florals, photo booth, and fully personalized design for an unforgettable celebration with family and friends.',
+    },
+    shortDescription: {
+      he: 'קירות צילום והפקות מעוצבות לגילוי מין העובר.',
+      en: 'Styled photo walls and setups for gender reveal celebrations.',
+    },
+    image: assetUrl('/catalog/walls/gender-reveal-baby.png'),
+    heroImage: assetUrl('/catalog/walls/gender-reveal-baby.png'),
   },
 ];
 

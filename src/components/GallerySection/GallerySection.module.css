@@ -13,6 +13,13 @@
   aspect-ratio: 1;
 }
 
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .image {
   width: 100%;
   height: 100%;
@@ -47,23 +54,35 @@
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
+    grid-auto-flow: row;
   }
 
-  .large {
-    grid-column: span 2;
-    grid-row: span 2;
+  .item {
     aspect-ratio: auto;
   }
 
-  .medium {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1;
+  .large,
+  .medium,
+  .small {
+    grid-column: auto;
+    grid-row: auto;
   }
 
-  .small {
-    aspect-ratio: 1;
+  .full {
+    grid-column: span 6;
+    aspect-ratio: 21 / 9;
+  }
+
+  .half {
+    grid-column: span 3;
+    aspect-ratio: 16 / 10;
+  }
+
+  .third {
+    grid-column: span 2;
+    aspect-ratio: 4 / 5;
   }
 }
 

@@ -27,8 +27,8 @@ export default function CatalogPage() {
               label={{ he: 'הקטלוג שלנו', en: 'Our Catalog' }}
               title={{ he: 'גלריית השירותים', en: 'Service Gallery' }}
               description={{
-                he: 'בחרו קטגוריה וגלו את מגוון עמדות הצילום, קירות הצילום והמגנטים שלנו — מושלם לחתונות, בר/בת מצווה, בריתות וכל אירוע.',
-                en: 'Choose a category and explore our photo booths, photo walls, and magnets — perfect for weddings, bar/bat mitzvah, britot, and any event.',
+                he: 'בחרו קטגוריה וגלו את מגוון השירותים שלנו — מושלם לחתונות, בר/בת מצווה, בריתות, הצעות נישואין, גילוי מין העובר וכל אירוע.',
+                en: 'Choose a category and explore our services — perfect for weddings, bar/bat mitzvah, britot, marriage proposals, gender reveals, and any event.',
               }}
             />
           </Reveal>

@@ -1,7 +1,9 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Navigate, useLocation, useParams } from 'react-router-dom';
 import { getText } from '../config/language';
 import { getCategoryById } from '../data/categories';
 import { getProductsByCategory } from '../data/products';
+import { scrollToSection } from '../hooks/useScrollReveal';
 import Reveal from '../components/Reveal/Reveal';
 import SectionHeading from '../components/SectionHeading/SectionHeading';
 import ProductGrid from '../components/ProductGrid/ProductGrid';
@@ -12,13 +14,21 @@ import styles from './CategoryPage.module.css';
 
 export default function CategoryPage() {
   const { categoryId } = useParams();
+  const location = useLocation();
   const category = getCategoryById(categoryId);
+  const categoryProducts = category ? getProductsByCategory(categoryId) : [];
+
+  useEffect(() => {
+    if (!category || !location.hash) return undefined;
+
+    const productId = location.hash.replace('#', '');
+    const timer = window.setTimeout(() => scrollToSection(productId), 300);
+    return () => window.clearTimeout(timer);
+  }, [category, location.hash, categoryProducts]);
 
   if (!category) {
     return <Navigate to="/catalog" replace />;
   }
-
-  const categoryProducts = getProductsByCategory(categoryId);
 
   return (
     <div className={styles.page}>

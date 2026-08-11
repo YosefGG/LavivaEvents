@@ -10,21 +10,30 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Logo from '../Logo/Logo';
-import { getText } from '../../config/language';
+import { direction, getText } from '../../config/language';
 import { navLinks, homeSectionIds } from '../../data/navigation';
 import { getQuoteWhatsAppUrl } from '../../data/businessInfo';
 import { scrollToSection, useScrollSpy } from '../../hooks/useScrollReveal';
 import BookButton from '../BookButton/BookButton';
 import styles from './Header.module.css';
 
+const BackIcon = direction === 'rtl' ? ArrowForwardIcon : ArrowBackIcon;
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [canGoBack, setCanGoBack] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
   const activeSection = useScrollSpy(isHome ? homeSectionIds : []);
+
+  useEffect(() => {
+    setCanGoBack((window.history.state?.idx ?? 0) > 0);
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -83,9 +92,20 @@ export default function Header() {
         className={`${styles.appBar} ${scrolled || !isHome ? styles.scrolled : ''}`}
       >
         <Toolbar disableGutters className={styles.toolbar}>
-          <Logo variant="header" />
+          <div className={styles.brandCluster}>
+            {canGoBack && (
+              <IconButton
+                className={styles.backButton}
+                onClick={() => navigate(-1)}
+                aria-label={getText({ he: 'חזרה', en: 'Go back' })}
+              >
+                <BackIcon />
+              </IconButton>
+            )}
+            <Logo variant="header" />
+          </div>
 
-          <nav className={styles.desktopNav} aria-label="Main navigation">
+          <nav className={styles.desktopNav} aria-label="Main navigation" dir={direction}>
             {navItems}
           </nav>
 
@@ -105,11 +125,11 @@ export default function Header() {
       </AppBar>
 
       <Drawer
-        anchor="right"
+        anchor={direction === 'rtl' ? 'right' : 'left'}
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
         className={styles.drawer}
-        PaperProps={{ className: styles.drawerPaper }}
+        PaperProps={{ className: styles.drawerPaper, dir: direction }}
       >
         <div className={styles.drawerHeader}>
           <Logo variant="drawer" />
@@ -124,7 +144,10 @@ export default function Header() {
                 onClick={() => handleNavClick(link)}
                 className={styles.drawerItem}
               >
-                <ListItemText primary={getText(link.label)} />
+                <ListItemText
+                  primary={getText(link.label)}
+                  primaryTypographyProps={{ style: { textAlign: 'start', color: '#000' } }}
+                />
               </ListItemButton>
             </ListItem>
           ))}

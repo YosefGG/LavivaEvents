@@ -19,8 +19,8 @@ export default function CatalogPreviewSection() {
             label={{ he: 'הקטלוג', en: 'Catalog' }}
             title={{ he: 'בחרו את החוויה שלכם', en: 'Choose Your Experience' }}
             description={{
-              he: 'עמדות צילום, קירות צילום ומגנטים — שלוש קטגוריות, אינסוף רגעים בלתי נשכחים.',
-              en: 'Photo booths, photo walls, and magnets — three categories, endless unforgettable moments.',
+              he: 'עמדות צילום, קירות צילום, מגנטים, הצעות נישואין וגילוי מין — קטגוריות מגוונות לכל סוג אירוע.',
+              en: 'Photo booths, photo walls, magnets, proposals, and gender reveals — diverse categories for every celebration.',
             }}
           />
         </Reveal>

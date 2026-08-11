@@ -15,9 +15,9 @@
     "semantic_hash": "3abf63c77bcfd116bf651feacfca479a"
   },
   "src/components/AboutSection/AboutSection.jsx": {
-    "mtime": 1786340623.1428206,
-    "ast_hash": "340eaa9d8432aa86244ef4737db4fc5a",
-    "semantic_hash": "340eaa9d8432aa86244ef4737db4fc5a"
+    "mtime": 1786428075.2504203,
+    "ast_hash": "2e6d63e2117d75de2c9c944a645443db",
+    "semantic_hash": ""
   },
   "src/components/BookButton/BookButton.jsx": {
     "mtime": 1786340623.065118,
@@ -35,9 +35,9 @@
     "semantic_hash": "4889f0e4e63f960095df3f5769416801"
   },
   "src/components/CatalogPreviewSection/CatalogPreviewSection.jsx": {
-    "mtime": 1786340623.065118,
-    "ast_hash": "549d141a66253757cfa2f62a34652b53",
-    "semantic_hash": "549d141a66253757cfa2f62a34652b53"
+    "mtime": 1786461969.398044,
+    "ast_hash": "5eb43226746a0cb2bbca033c117c9acb",
+    "semantic_hash": ""
   },
   "src/components/CategoryCard/CategoryCard.jsx": {
     "mtime": 1786341609.1074157,
@@ -60,17 +60,17 @@
     "semantic_hash": ""
   },
   "src/components/GallerySection/GallerySection.jsx": {
-    "mtime": 1786340623.0781283,
-    "ast_hash": "da6dd4b61780e22a3c19fbd371a0cc57",
-    "semantic_hash": "da6dd4b61780e22a3c19fbd371a0cc57"
+    "mtime": 1786462705.3620143,
+    "ast_hash": "2a04efe0d14b00b436ddb176ff100918",
+    "semantic_hash": ""
   },
   "src/components/Header/Header.jsx": {
-    "mtime": 1786390752.6974611,
-    "ast_hash": "616d5eaf1e485f0c36b8cbb63667de18",
+    "mtime": 1786427656.91062,
+    "ast_hash": "c1b838364b9895f78d27098c277d763c",
     "semantic_hash": ""
   },
   "src/components/HeroSection/HeroSection.jsx": {
-    "mtime": 1786390731.389041,
+    "mtime": 1786427864.9793096,
     "ast_hash": "1abee54668e5713ca7d823545a580a5c",
     "semantic_hash": ""
   },
@@ -80,14 +80,14 @@
     "semantic_hash": "ca774fd23c1b34f3f39a1c600ae42bd3"
   },
   "src/components/Logo/Logo.jsx": {
-    "mtime": 1786340623.1011982,
+    "mtime": 1786427869.1142192,
     "ast_hash": "4d4ca30d70746511473a65648a7f4406",
-    "semantic_hash": "4d4ca30d70746511473a65648a7f4406"
+    "semantic_hash": ""
   },
   "src/components/ProductCard/ProductCard.jsx": {
-    "mtime": 1786340623.1011982,
-    "ast_hash": "7f7cd11af453d47eef84c9d5e965ab55",
-    "semantic_hash": "7f7cd11af453d47eef84c9d5e965ab55"
+    "mtime": 1786462980.3732152,
+    "ast_hash": "8b5fa2009ba371379ffb63296a891cd5",
+    "semantic_hash": ""
   },
   "src/components/ProductGrid/ProductGrid.jsx": {
     "mtime": 1786340623.0781283,
@@ -135,13 +135,13 @@
     "semantic_hash": "471bc0eb400549453010d6cb72c39fa8"
   },
   "src/data/businessInfo.js": {
-    "mtime": 1786391517.193302,
-    "ast_hash": "3e9ecab33d9a2b0b020ac42029d6ed27",
+    "mtime": 1786461934.9345796,
+    "ast_hash": "1c285dc5fa61b1dac046889254ab091e",
     "semantic_hash": ""
   },
   "src/data/categories.js": {
-    "mtime": 1786375573.6599782,
-    "ast_hash": "40065e3239bf091d18275b6947062a0f",
+    "mtime": 1786461969.206594,
+    "ast_hash": "ed822a2f19e7f9a20dbc438eea7b8635",
     "semantic_hash": ""
   },
   "src/data/eventTypes.js": {
@@ -150,9 +150,9 @@
     "semantic_hash": "d899eeb3ef6a8d287e3de01007108f4b"
   },
   "src/data/gallery.js": {
-    "mtime": 1786340623.1021998,
-    "ast_hash": "7f00124d0d0ad668c7860a2e8be74fca",
-    "semantic_hash": "7f00124d0d0ad668c7860a2e8be74fca"
+    "mtime": 1786462703.8102176,
+    "ast_hash": "d64a269c718e9f67c4ad24e22c11cd92",
+    "semantic_hash": ""
   },
   "src/data/navigation.js": {
     "mtime": 1786392771.1171784,
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "src/data/products.js": {
-    "mtime": 1786375586.8232207,
-    "ast_hash": "ca35fd080a36af1537b930cfbfa3d502",
+    "mtime": 1786461982.2039552,
+    "ast_hash": "f2a2e0d5e439f7b140bef878e5382047",
     "semantic_hash": ""
   },
   "src/data/services.js": {
@@ -185,9 +185,9 @@
     "semantic_hash": "f7d3e800e3d8652e44688eb5a0a2fa47"
   },
   "src/hooks/useCarousel.js": {
-    "mtime": 1786340623.0781283,
+    "mtime": 1786429169.5142963,
     "ast_hash": "f7ff7ee0566e64432a4746fbfc269a7f",
-    "semantic_hash": "f7ff7ee0566e64432a4746fbfc269a7f"
+    "semantic_hash": ""
   },
   "src/hooks/useScrollReveal.js": {
     "mtime": 1786376928.2907472,
@@ -200,13 +200,13 @@
     "semantic_hash": "b5490904e79941ac87bcc9a1542af5cb"
   },
   "src/pages/CatalogPage.jsx": {
-    "mtime": 1786390731.9110155,
-    "ast_hash": "c50ad40b417ede257b39776a84fa274f",
+    "mtime": 1786461969.3960364,
+    "ast_hash": "5f8acb481d29231eacc1b820e867778c",
     "semantic_hash": ""
   },
   "src/pages/CategoryPage.jsx": {
-    "mtime": 1786390733.1541853,
-    "ast_hash": "82f6011e21e272906d30ddc6d056c9f2",
+    "mtime": 1786462711.9411776,
+    "ast_hash": "1eb64acf35093c71573bc5ec9b7df9e8",
     "semantic_hash": ""
   },
   "src/pages/HomePage.jsx": {
@@ -277,6 +277,11 @@
   "src/data/blog-keywords.txt": {
     "mtime": 1786391772.2849603,
     "ast_hash": "d38a67e1029fed10332bb0dc165627f4",
+    "semantic_hash": ""
+  },
+  "src/components/ImageZoomDialog/ImageZoomDialog.jsx": {
+    "mtime": 1786466201.4741018,
+    "ast_hash": "9df34fd46928402dbbb12554cde38361",
     "semantic_hash": ""
   }
 }

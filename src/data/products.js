@@ -26,8 +26,7 @@ export const products = [
       he: 'חוויית צילום 360 מרהיבה — סרטון ותמונות slow-motion שיוצרים רגעים ויראליים באירוע.',
       en: 'Stunning 360 capture — slow-motion video and photos that create viral event moments.',
     },
-    image:
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
+    image: assetUrl('/catalog/booths/premium-booth-station.png'),
     eventTypes: ['wedding', 'bar-mitzvah', 'corporate', 'all'],
     features: [
       { he: 'סרטון 360 + GIF', en: '360 video + GIF' },
@@ -61,8 +60,7 @@ export const products = [
       he: 'רקעים דיגיטליים מדהימים — מהחוף ועד לפריז, עם תמונות שיוצאות כמו מגזין.',
       en: 'Amazing digital backdrops — from the beach to Paris, with magazine-quality photos.',
     },
-    image:
-      'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80',
+    image: assetUrl('/catalog/walls/marriage-proposal-marry.png'),
     eventTypes: ['corporate', 'bar-mitzvah', 'wedding', 'all'],
     features: [
       { he: 'מגוון רקעים דיגיטליים', en: 'Multiple digital backgrounds' },
@@ -79,8 +77,7 @@ export const products = [
       he: 'עמדת פולארoid נוסטלגית עם הדפסות מיידיות בפורמט קלאסי — מושלמת לחתונות.',
       en: 'Nostalgic Polaroid booth with instant classic-format prints — perfect for weddings.',
     },
-    image:
-      'https://images.unsplash.com/photo-1522673604730-d871a1720209?w=800&q=80',
+    image: assetUrl('/catalog/booths/premium-booth-station.png'),
     eventTypes: ['wedding', 'brit', 'all'],
     features: [
       { he: 'פולארoid אמיתי', en: 'Authentic Polaroid prints' },
@@ -243,6 +240,40 @@ export const products = [
     priceFrom: 3500,
   },
   {
+    id: 'gender-reveal-wall',
+    categoryId: 'gender-reveal',
+    name: { he: 'קיר גילוי מין העובר', en: 'Gender Reveal Photo Wall' },
+    description: {
+      he: 'קיר צילום מעוצב לגילוי מין העובר — בלונים, פרחים, עמדת צילום ועיצוב מותאם אישית לחגיגה בלתי נשכחת.',
+      en: 'Styled gender reveal photo wall — balloons, florals, photo booth, and fully personalized design for an unforgettable celebration.',
+    },
+    image: assetUrl('/catalog/walls/gender-reveal-baby.png'),
+    eventTypes: ['all'],
+    features: [
+      { he: 'עיצוב מותאם אישית', en: 'Fully personalized design' },
+      { he: 'שילוב עמדת צילום', en: 'Photo booth integration' },
+      { he: 'בלונים ודקורציה פרימיום', en: 'Premium balloons and décor' },
+    ],
+    priceFrom: 2400,
+  },
+  {
+    id: 'marriage-proposal-wall',
+    categoryId: 'marriage-proposal',
+    name: { he: 'קיר הצעת נישואין', en: 'Marriage Proposal Wall' },
+    description: {
+      he: 'קיר צילום רומנטי להצעת נישואין — עיצוב מרהיב על החוף או בכל מיקום, עם פרחים, תאורה ולוח מותאם אישית.',
+      en: 'Romantic marriage proposal photo wall — stunning beach or venue setup with florals, lighting, and a custom sign.',
+    },
+    image: assetUrl('/catalog/walls/marriage-proposal-marry.png'),
+    eventTypes: ['wedding', 'all'],
+    features: [
+      { he: 'עיצוב רומנטי מותאם', en: 'Custom romantic design' },
+      { he: 'פרחים ותאורה', en: 'Florals and lighting' },
+      { he: 'לוח / טקסט אישי', en: 'Personalized sign or text' },
+    ],
+    priceFrom: 4500,
+  },
+  {
     id: 'magnet-booth',
     categoryId: 'magnets',
     name: { he: 'עמדת מגנטים קלאסית', en: 'Classic Magnet Booth' },
@@ -250,8 +281,7 @@ export const products = [
       he: 'עמדת מגנטים מלאה — צילום, עריכה והדפסה מיידית של מגנטים שהאורחים לוקחים הביתה.',
       en: 'Full magnet booth — shoot, edit, and instantly print magnets guests take home.',
     },
-    image:
-      'https://images.unsplash.com/photo-1520854221256-174851aa3ced?w=800&q=80',
+    image: assetUrl('/catalog/booths/premium-booth-station.png'),
     eventTypes: ['wedding', 'brit', 'bar-mitzvah', 'all'],
     features: [
       { he: 'הדפסת מגנטים מיידית', en: 'Instant magnet printing' },
@@ -268,8 +298,7 @@ export const products = [
       he: 'חבילה מלאה עם עיצוב מותאם, מגנטים בגודל XL, אלבום מתנה וגלריה דיגיטלית.',
       en: 'Full package with custom design, XL magnets, gift album, and digital gallery.',
     },
-    image:
-      'https://images.unsplash.com/photo-1465497424741-b3246200d2f0?w=800&q=80',
+    image: assetUrl('/catalog/walls/marriage-proposal-marry.png'),
     eventTypes: ['wedding', 'bar-mitzvah', 'all'],
     features: [
       { he: 'מגנטים XL', en: 'XL magnets' },
@@ -286,8 +315,7 @@ export const products = [
       he: 'הוסיפו הדפסת מגנטים לכל עמדת צילום — שדרוג מושלם שמגדיל את חוויית האורחים.',
       en: 'Add magnet printing to any photo booth — the perfect upgrade for guest experience.',
     },
-    image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80',
+    image: assetUrl('/catalog/booths/premium-booth-station.png'),
     eventTypes: ['wedding', 'brit', 'bar-mitzvah', 'corporate', 'all'],
     features: [
       { he: 'שילוב עם עמדה קיימת', en: 'Pairs with existing booth' },

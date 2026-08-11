@@ -43,8 +43,7 @@ export const businessInfo = {
   yearsExperience: 8,
   eventsCount: 500,
   heroVideo: assetUrl('/hero-video.mp4'),
-  aboutImage:
-    'https://images.unsplash.com/photo-1465497424741-b3246200d2f0?w=900&q=80',
+  aboutImage: assetUrl('/catalog/booths/premium-booth-station.png'),
   aboutFeatures: [
     { he: 'צוות מקצועי ומנוסה', en: 'Professional experienced team' },
     { he: 'עיצוב ומיתוג מותאם אישית', en: 'Custom design and branding' },
