@@ -29,9 +29,8 @@ jobs:
       - run: npm run build
       - run: cp dist/index.html dist/404.html
 
-      - name: Publish built site to main branch root
+      - name: Publish built assets to main branch root
         run: |
-          cp dist/index.html index.html
           rm -rf assets
           cp -r dist/assets assets
           for item in dist/*; do
@@ -45,7 +44,7 @@ jobs:
           touch .nojekyll
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html assets 404.html .nojekyll catalog favicon.svg hero-video.mp4 icons.svg laviva-logo.png 2>/dev/null || true
+          git add assets 404.html .nojekyll catalog favicon.svg hero-video.mp4 icons.svg laviva-logo.png 2>/dev/null || true
           git diff --staged --quiet || git commit -m "Deploy built site to main [skip ci]"
           git push
 
